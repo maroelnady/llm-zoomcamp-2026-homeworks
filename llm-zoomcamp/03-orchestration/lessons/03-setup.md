@@ -54,8 +54,8 @@ Kestra reads secrets from environment variables prefixed with `SECRET_` where th
 ```bash
 export GEMINI_API_KEY="---" # required
 export SECRET_GEMINI_API_KEY=$(echo -n $GEMINI_API_KEY | base64) # required
-export SECRET_OPENAI_API_KEY=$(echo -n "sk---l-- | base64)   # required for flow 3
-export SECRET_TAVILY_API_KEY=$(echo -n "tvly---v----" | base64)   # optional
+export SECRET_OPENAI_API_KEY=$(echo -n "" | base64)   # required for flow 3
+export SECRET_TAVILY_API_KEY=$(echo -n "" | base64)   # optional
 ```
 
 Then start (or restart) Kestra:
