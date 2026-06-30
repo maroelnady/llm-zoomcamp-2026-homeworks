@@ -20,7 +20,6 @@ docker compose up -d
 Once the container starts, access the Kestra UI at http://localhost:8080.
 
 To shut down Kestra:
-
 ```bash
 docker compose down
 ```
@@ -53,10 +52,10 @@ The free tier includes 1,000 searches/month.
 Kestra reads secrets from environment variables prefixed with `SECRET_` where the value is base64-encoded. Export your keys before starting Kestra:
 
 ```bash
-export GEMINI_API_KEY="your-gemini-api-key-here" # required
+export GEMINI_API_KEY="AIzaSyAGBU_Z85NwHlfYeMJFfAgIim1JBXw09qc" # required
 export SECRET_GEMINI_API_KEY=$(echo -n $GEMINI_API_KEY | base64) # required
-export SECRET_OPENAI_API_KEY=$(echo -n "your-openai-api-key-here" | base64)   # required for flow 3
-export SECRET_TAVILY_API_KEY=$(echo -n "your-tavily-api-key-here" | base64)   # optional
+export SECRET_OPENAI_API_KEY=$(echo -n "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" | base64)   # required for flow 3
+export SECRET_TAVILY_API_KEY=$(echo -n "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" | base64)   # optional
 ```
 
 Then start (or restart) Kestra:
